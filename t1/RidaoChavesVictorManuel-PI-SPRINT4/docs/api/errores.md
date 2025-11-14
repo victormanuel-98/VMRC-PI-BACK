@@ -8,3 +8,15 @@ Formato general de errores:
   "message": "Descripción del error",
   "details": []
 }
+
+{
+  "code": "VALIDATION_ERROR",
+  "message": "El campo 'email' es obligatorio",
+  "details": ["email"]
+}
+
+{
+  "code": "NOT_FOUND",
+  "message": "Alimento con ID 12 no encontrado",
+  "details": []
+}
