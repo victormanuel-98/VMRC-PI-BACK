@@ -2,18 +2,25 @@
 node_modules/
 /.pnp
 .pnp.js
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
 
 # Testing
 /coverage
+*.test.js.snap
 
 # Production build
 /dist
 /build
+/out
 
 # Environment variables
 .env
 .env.local
 .env.*.local
+.env.production
+.env.development
 
 # IDE and Editor
 .vscode/
@@ -44,12 +51,12 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 lerna-debug.log*
-*.phar
 pnpm-debug.log*
 
 # Cache
 .eslintcache
 .stylelintcache
+.parcel-cache
 
 # Runtime data
 pids
@@ -63,14 +70,22 @@ dist-ssr
 *.local
 vite.config.js.timestamp-*
 
-# Package manager lock files (optional, uncomment if you want to track them)
-# package-lock.json
-# yarn.lock
-# pnpm-lock.yaml
-# Uncomment if using bun and want to ignore its lockfile
-# bun.lockb
-
 # Temporary files
 temp/
 tmp/
 *.tmp
+
+# MongoDB
+*.bson
+*.dump
+
+# Cloudinary uploads (local backups)
+uploads/
+
+# Documentation builds
+docs/.vuepress/dist
+
+# Backup files
+*.bak
+*.backup
+*~
