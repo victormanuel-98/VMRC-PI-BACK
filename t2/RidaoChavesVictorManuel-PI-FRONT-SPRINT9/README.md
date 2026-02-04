@@ -1,22 +1,22 @@
-# FitFood - Aplicación de Recetas Saludables
+# SPRINT 9 - FitFood - Aplicación de Recetas Saludables
 
-## 📋 Descripción del Proyecto
+## Descripción del Proyecto
 
 FitFood es una aplicación web fullstack para crear, gestionar y descubrir recetas saludables. Permite a los usuarios crear recetas con información nutricional detallada, gestionar su perfil, y explorar recetas por categorías.
 
 ---
 
-## 🚀 Características Implementadas
+## Características Implementadas
 
 ### Sprint 9 - Integración Backend y Funcionalidades Avanzadas
 
-#### ✅ Sistema de Autenticación
+#### Sistema de Autenticación
 - Registro e inicio de sesión con JWT
 - Persistencia de sesión en localStorage
 - Rutas protegidas con middleware de autenticación
 - Contexto global de autenticación (AuthContext)
 
-#### ✅ Gestión de Recetas
+#### Gestión de Recetas
 - **Crear Recetas**: Formulario completo con búsqueda inteligente de ingredientes
   - Autocompletado de ingredientes (70+ ingredientes en base de datos)
   - Validación de ingredientes (requiere selección de ID)
@@ -43,7 +43,7 @@ FitFood es una aplicación web fullstack para crear, gestionar y descubrir recet
   - Badges de calorías y dificultad
   - Navegación dinámica a detalle
 
-#### ✅ Gestión de Perfil de Usuario
+#### Gestión de Perfil de Usuario
 - **Obtener Perfil**: Carga automática de datos del usuario
 - **Actualizar Perfil**: Edición completa de información personal
   - Campos: nombre, apellidos, usuario, email, teléfono, notificaciones
@@ -53,7 +53,7 @@ FitFood es una aplicación web fullstack para crear, gestionar y descubrir recet
   - Validación de unicidad de email
   - Autorización: usuario solo puede editar su propio perfil (excepto admin)
 
-#### ✅ Backend - API REST
+#### Backend - API REST
 - **Node.js + Express**: Servidor HTTP con rutas RESTful
 - **MongoDB + Mongoose**: Base de datos NoSQL con modelos definidos
 - **Cloudinary**: Almacenamiento de imágenes
@@ -62,6 +62,7 @@ FitFood es una aplicación web fullstack para crear, gestionar y descubrir recet
 - **CORS**: Configurado para desarrollo local
 
 **Endpoints implementados:**
+
 ```
 POST   /api/auth/registro          - Registro de usuario
 POST   /api/auth/login             - Inicio de sesión
@@ -88,10 +89,9 @@ GET    /api/valoraciones/:id       - Obtener valoraciones de receta
 POST   /api/upload/receta          - Subir imagen de receta
 POST   /api/upload/perfil          - Subir imagen de perfil
 ```
-
 ---
 
-## 🏗️ Arquitectura de Navegación
+## Arquitectura de Navegación
 
 ### Layouts Implementados
 
@@ -149,7 +149,7 @@ POST   /api/upload/perfil          - Subir imagen de perfil
 
 ---
 
-## 🛠️ Tecnologías Utilizadas
+## Tecnologías Utilizadas
 
 ### Frontend
 - **React 19.2.0**: Framework UI con hooks
@@ -170,7 +170,7 @@ POST   /api/upload/perfil          - Subir imagen de perfil
 
 ---
 
-## 📁 Estructura del Proyecto
+## Estructura del Proyecto
 
 ```
 RidaoChavesVictorManuel-PI-FRONT-SPRINT9/
@@ -178,7 +178,7 @@ RidaoChavesVictorManuel-PI-FRONT-SPRINT9/
 │   ├── src/
 │   │   ├── controllers/
 │   │   │   ├── authController.js
-│   │   │   ├── userController.js          ⭐ NUEVO
+│   │   │   ├── userController.js          
 │   │   │   ├── recipeController.js
 │   │   │   ├── ingredientController.js
 │   │   │   ├── favoriteController.js
@@ -186,7 +186,7 @@ RidaoChavesVictorManuel-PI-FRONT-SPRINT9/
 │   │   │   └── uploadController.js
 │   │   ├── routes/
 │   │   │   ├── authRoutes.js
-│   │   │   ├── userRoutes.js              ⭐ NUEVO
+│   │   │   ├── userRoutes.js              
 │   │   │   ├── recipeRoutes.js
 │   │   │   ├── ingredientRoutes.js
 │   │   │   ├── favoriteRoutes.js
@@ -228,20 +228,20 @@ RidaoChavesVictorManuel-PI-FRONT-SPRINT9/
 │   │   │   ├── Login.jsx
 │   │   │   ├── Register.jsx
 │   │   │   ├── Home.jsx
-│   │   │   ├── Profile.jsx                ⭐ REESCRITO
-│   │   │   ├── MyRecipes.jsx              ⭐ REESCRITO
-│   │   │   ├── RecipeDetail.jsx           ⭐ REESCRITO
-│   │   │   ├── CreateRecipe.jsx           ⭐ REESCRITO
-│   │   │   ├── BreakfastRecipes.jsx       ⭐ REESCRITO
+│   │   │   ├── Profile.jsx          
+│   │   │   ├── MyRecipes.jsx       
+│   │   │   ├── RecipeDetail.jsx    
+│   │   │   ├── CreateRecipe.jsx   
+│   │   │   ├── BreakfastRecipes.jsx 
 │   │   │   ├── Contact.jsx
 │   │   │   ├── Settings.jsx
 │   │   │   ├── NotFound.jsx
 │   │   │   └── Forbidden.jsx
 │   │   ├── services/
-│   │   │   └── api.js                     ⭐ AMPLIADO
+│   │   │   └── api.js   
 │   │   ├── styles/
 │   │   │   └── styles.css
-│   │   ├── App.jsx                        ⭐ MODIFICADO
+│   │   ├── App.jsx        
 │   │   └── main.jsx
 │   ├── public/
 │   ├── .gitignore
@@ -250,6 +250,7 @@ RidaoChavesVictorManuel-PI-FRONT-SPRINT9/
 │
 ├── .gitignore
 └── README.md
+```
 
 ### 1. **Separación de Layouts**
 **Decisión**: Crear dos layouts diferenciados (Public/Private)
@@ -318,7 +319,7 @@ src/
 
 ---
 
-## 🔑 Decisiones Técnicas
+## Decisiones Técnicas
 ### 6. **Búsqueda Inteligente de Ingredientes**
 **Decisión**: Implementar autocompletado con búsqueda en tiempo real
 
@@ -357,7 +358,7 @@ src/
 
 ---
 
-## 🚦 Instrucciones de Ejecución
+## Instrucciones de Ejecución
 
 ### Prerrequisitos
 - Node.js v18 o superior
@@ -367,14 +368,17 @@ src/
 ### Configuración del Backend
 
 1. **Instalar dependencias**:
-```bash
+
+```
 cd backend
 npm install
 ```
 
 2. **Configurar variables de entorno**:
+
 Crear archivo `.env` en `/backend`:
-```env
+
+```
 PORT=5000
 MONGO_URI=mongodb+srv://tu-usuario:tu-password@cluster.mongodb.net/fitfood
 JWT_SECRET=tu-clave-secreta-super-segura
@@ -386,7 +390,8 @@ CORS_ORIGIN=http://localhost:5173
 ```
 
 3. **Iniciar servidor**:
-```bash
+
+```
 npm run dev
 ```
 El servidor estará en [http://localhost:5000](http://localhost:5000)
@@ -394,7 +399,8 @@ El servidor estará en [http://localhost:5000](http://localhost:5000)
 ### Configuración del Frontend
 
 1. **Instalar dependencias**:
-```bash
+
+```
 cd frontend
 npm install
 ```
@@ -420,14 +426,15 @@ npm run build
 ```
 
 **Backend**:
-```bash
+
+```
 cd backend
 npm start
 ```
 
 ---
 
-## 👤 Credenciales de Prueba
+## Credenciales de Prueba
 
 **Opción 1 - Crear cuenta nueva**:
 - Ir a `/registro` y completar el formulario
@@ -438,10 +445,11 @@ npm start
 
 ---
 
-## 📊 Modelos de Datos
+## Modelos de Datos
 
 ### User (Usuario)
-```javascript
+
+```
 {
   usuario: String (único, requerido),
   email: String (único, requerido),
@@ -457,7 +465,8 @@ npm start
 ```
 
 ### Recipe (Receta)
-```javascript
+
+```
 {
   nombre: String (requerido),
   descripcionCorta: String (requerido),
@@ -480,7 +489,8 @@ npm start
 ```
 
 ### Ingredient (Ingrediente)
-```javascript
+
+```
 {
   nombre: String (único, requerido),
   categoria: String,
@@ -493,7 +503,7 @@ npm start
 
 ---
 
-## 🎯 Próximos Pasos (Pendientes)
+## Próximos Pasos (Pendientes)
 
 - [ ] Implementar categorías adicionales (Almuerzo, Cena, Merienda)
 - [ ] Sistema de historial de consumo diario
@@ -508,9 +518,7 @@ npm start
 
 ---
 
-## 📸 Capturas de Pantalla
-
-## 📸 Capturas de Pantalla
+## Capturas de Pantalla
 
 ### Login
 ![Login](./frontend/public/images/login.png)
@@ -523,7 +531,7 @@ npm start
 
 ---
 
-## 📝 Notas de Desarrollo
+## Notas de Desarrollo
 
 ### Sprint 9 - Cambios Principales
 
@@ -544,17 +552,3 @@ npm start
 - Mensajes de feedback para operaciones CRUD
 - Validaciones en tiempo real
 - Imágenes con fallback SVG
-
----
-
-## 👨‍💻 Autor
-
-**Victor Manuel Ridao Chaves**  
-Proyecto Integrado - Sprint 9  
-Desarrollo de Aplicaciones Web
-
----
-
-## 📄 Licencia
-
-Este proyecto es parte de un trabajo académico.
